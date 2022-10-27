@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Kotlin Compact JIRA",
+  "description": "Compact JIRA",
+  "action": {
+    "default_popup": "index.html",
+    "default_title": "Toggle features"
+  },
+  "version": "1.0",
+  "icons": {
+    "16": "jiralogo128.png",
+    "48": "jiralogo128.png",
+    "128": "jiralogo128.png"
+  },
+  "permissions": [
+    "storage",
+    "scripting"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://jira.storebrand.no/*"],
+      "js": ["toggle-content.js"]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+}

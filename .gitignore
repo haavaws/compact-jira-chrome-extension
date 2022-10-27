@@ -1,5 +1,8 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
+.idea/
+.gradle/
+
 # dependencies
 /node_modules
 /.pnp
@@ -9,7 +12,8 @@
 /coverage
 
 # production
-/build
+/build/*
+!/build/distributions
 
 # misc
 .DS_Store
