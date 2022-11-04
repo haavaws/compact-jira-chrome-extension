@@ -7,9 +7,11 @@ const CARD_CLASS = ".ghx-issue";
 const PARTY_MODE = "PARTY_MODE";
 
 function toggle_hidden(selector, state) {
-    const elements = document.querySelectorAll(selector);
-    elements.forEach((element) => {
-        element.hidden = !state;
+    const cards = document.querySelectorAll(CARD_CLASS);
+    cards.forEach((card) => {
+        card.querySelectorAll(selector).forEach((element) => {
+            element.hidden = !state;
+        });
     });
 }
 
